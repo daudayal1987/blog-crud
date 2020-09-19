@@ -1,1 +1,1 @@
-# student-crud
+# blog-crud
