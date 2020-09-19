@@ -1,0 +1,35 @@
+{
+  "name": "blog-crud",
+  "version": "1.0.0",
+  "description": "Blog Crud Operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec src/**/*.spec.js",
+    "start": "node src/index.js",
+    "lint": "standard --verbose | snazzy",
+    "node-debug": "DEBUG=express* node src/index.js",
+    "chrome-debug": "node --debug-brk --inspect src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daudayal1987/blog-crud.git"
+  },
+  "author": "Dau Dayal Agrawal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daudayal1987/blog-crud/issues"
+  },
+  "homepage": "https://github.com/daudayal1987/blog-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^4.0.4-beta.0",
+    "helmet": "^4.1.1",
+    "http-status": "^1.4.2",
+    "joi": "^17.2.1",
+    "mongodb": "^3.6.2",
+    "morgan": "^1.10.0"
+  }
+}
