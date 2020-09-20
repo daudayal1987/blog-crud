@@ -1,0 +1,21 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+    - "8080:3000"
+    depends_on:
+      mongo-db:
+        condition: service_started
+    environment:
+      DB: blogdb
+      DB_AUTH: ''
+      DB_USER: ''
+      DB_PASS: ''
+      DB_SERVERS: mongo-db:27017
+  mongo-db:
+    image: mongo:3.6
+    ports:
+    - "27018:27017"
+    volumes:
+    - ./mongo-db/data:/data/db:rw

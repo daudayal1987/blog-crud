@@ -1,5 +1,13 @@
+/**
+ * Validation middleware to validate call / routes
+ */
 const Joi = require('joi');
 
+/**
+ * 
+ * @param schema joiSchema which need to validate
+ * @param property request property which need to validate (body, params, query)
+ */
 const middleware = (schema, property) => {
   return (req, res, next) => {
 

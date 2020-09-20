@@ -1,3 +1,6 @@
+/**
+ * Joi Schemas of the routes
+ */
 const Joi = require('joi');
 
 const schemas = {
@@ -8,7 +11,7 @@ const schemas = {
   }),
   blogLIST: Joi.object({
     page: Joi.number().min(1).required(),
-    pageSize: Joi.number().min(5).max(100).required().message('PageSize value must be between 5 and 100')
+    pageSize: Joi.number().min(5).max(100).required()
   }),
   blogDETAIL: Joi.object({
     id: Joi.string().pattern(new RegExp('^[0-9a-fA-F]{24}$')).message('Invalid post Id') //validation for Mongo ObjectID

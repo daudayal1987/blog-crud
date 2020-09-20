@@ -1,3 +1,7 @@
+/**
+ * Server file of application 
+ * it will run the actual application
+ */
 const express = require('express');
 const logger = require('morgan');
 const helmet = require('helmet');

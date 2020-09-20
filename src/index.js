@@ -1,5 +1,9 @@
 'use strict'
-require('dotenv').config()
+/**
+ * Bootstrap file of service
+ * It will load all dependencies of services here and pass dependency to modules from here
+ * Using Dependency Injection pattern (DI)
+ */
 
 // we load all the depencies we need
 const {EventEmitter} = require('events');
@@ -47,7 +51,7 @@ mediator.on('db.error', (err) => {
   console.error(err)
 })
 
-// we load the connection to the repository
+// we load the connection to the repository, it will bind boot.ready event 
 config.db.connect(config.dbSettings, mediator)
 // init the repository connection, and the event listener will handle the rest
 mediator.emit('boot.ready')
